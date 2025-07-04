@@ -87,7 +87,7 @@ const ContactForm: React.FC = () => {
               <div className="mt-4 space-y-3">
                 <div className="flex items-center">
                     <svg className="w-5 h-5 text-brand-accent mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    <span className="text-neutral-700">contact@paradia.com</span>
+                    <span className="text-neutral-700">contact@paradiaLtd.com</span>
                 </div>
                 <div className="flex items-center">
                      <svg className="w-5 h-5 text-brand-accent mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
@@ -101,18 +101,30 @@ const ContactForm: React.FC = () => {
             </div>
           </div>
           <div className="md:col-span-2 bg-white p-8 rounded-2xl shadow-xl">
-            <form onSubmit={handleSubmit} noValidate>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <input type="text" name="name" placeholder="Votre nom complet" onChange={handleChange} required className="w-full p-3 bg-neutral-100 border-2 border-transparent rounded-lg focus:bg-white focus:border-brand-accent focus:ring-0 transition-colors"/>
-                <input type="email" name="email" placeholder="Votre email professionnel" onChange={handleChange} required className="w-full p-3 bg-neutral-100 border-2 border-transparent rounded-lg focus:bg-white focus:border-brand-accent focus:ring-0 transition-colors"/>
-                <input type="text" name="company" placeholder="Votre entreprise (facultatif)" onChange={handleChange} className="w-full p-3 bg-neutral-100 border-2 border-transparent rounded-lg focus:bg-white focus:border-brand-accent focus:ring-0 transition-colors sm:col-span-2"/>
-                <textarea name="message" placeholder="Décrivez votre projet ou votre question..." rows={5} onChange={handleChange} required className="w-full p-3 bg-neutral-100 border-2 border-transparent rounded-lg focus:bg-white focus:border-brand-accent focus:ring-0 transition-colors sm:col-span-2 resize-none"></textarea>
-              </div>
-              {error && <p className="text-red-500 mt-4 text-sm">{error}</p>}
-              <button type="submit" className="mt-6 w-full bg-brand-primary hover:bg-brand-dark text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
-                Envoyer Votre Message
-              </button>
-            </form>
+            <form
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  data-netlify-honeypot="bot-field"
+  noValidate
+>
+  <input type="hidden" name="form-name" value="contact" />
+  <div className="hidden">
+    <label>
+      Don’t fill this out: <input name="bot-field" />
+    </label>
+  </div>
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <input type="text" name="name" placeholder="Votre nom complet" onChange={handleChange} required className="w-full p-3 bg-neutral-100 border-2 border-transparent rounded-lg focus:bg-white focus:border-brand-accent focus:ring-0 transition-colors"/>
+    <input type="email" name="email" placeholder="Votre email professionnel" onChange={handleChange} required className="w-full p-3 bg-neutral-100 border-2 border-transparent rounded-lg focus:bg-white focus:border-brand-accent focus:ring-0 transition-colors"/>
+    <input type="text" name="company" placeholder="Votre entreprise (facultatif)" onChange={handleChange} className="w-full p-3 bg-neutral-100 border-2 border-transparent rounded-lg focus:bg-white focus:border-brand-accent focus:ring-0 transition-colors sm:col-span-2"/>
+    <textarea name="message" placeholder="Décrivez votre projet ou votre question..." rows={5} onChange={handleChange} required className="w-full p-3 bg-neutral-100 border-2 border-transparent rounded-lg focus:bg-white focus:border-brand-accent focus:ring-0 transition-colors sm:col-span-2 resize-none"></textarea>
+  </div>
+  {error && <p className="text-red-500 mt-4 text-sm">{error}</p>}
+  <button type="submit" className="mt-6 w-full bg-brand-primary hover:bg-brand-dark text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+    Envoyer Votre Message
+  </button>
+</form>
           </div>
         </div>
       </div>

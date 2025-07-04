@@ -34,10 +34,19 @@ const GlobeAltIcon: React.FC<{className?: string}> = ({className}) => (
 );
 
 export const LogoParadiaIcon: React.FC<{ className?: string }> = ({ className }) => (
-    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-        <path d="M10 4H16C21.5228 4 26 8.47715 26 14V14C26 19.5228 21.5228 24 16 24H10" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M10 12H20C23.3137 12 26 9.31371 26 6V6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-    </svg>
+  <svg
+    width="32"
+    height="32"
+    viewBox="0 0 256 256"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M128 16C128 16 32 48 32 112C32 208 128 240 128 240C128 240 224 208 224 112C224 48 128 16 128 16Z"
+      fill="currentColor"
+    />
+  </svg>
 );
 
 
@@ -91,7 +100,7 @@ export const SERVICES: Service[] = [
   {
     icon: <ZapIcon />,
     title: "Automatisation de Workflows",
-    description: "Conception et automatisation de workflows complexes avec MAKE.COM et N8N pour augmenter la productivité et réduire les erreurs.",
+    description: "Conception et automatisation de workflows complexes pour augmenter la productivité et réduire les erreurs.",
   },
   {
     icon: <ChartBarIcon />,
@@ -143,19 +152,19 @@ export const CASE_STUDIES: CaseStudy[] = [
 export const TESTIMONIALS: Testimonial[] = [
   {
     quote: "L'équipe de Paradia a transformé notre gestion opérationnelle. Leur expertise en automatisation nous a fait économiser des centaines d'heures et a éliminé les erreurs humaines. Un partenaire indispensable.",
-    name: "Julien Bernard",
+    name: "Julien.B",
     title: "Directeur des Opérations",
     company: "Logistique Express"
   },
   {
     quote: "Le lancement de notre marque e-commerce a dépassé toutes nos attentes grâce à Paradia. Leur approche stratégique et leur gestion complète du projet nous ont permis de nous concentrer sur notre produit.",
-    name: "Sophie Dubois",
+    name: "Sophie.D",
     title: "Fondatrice",
     company: "Atelier Fleuri"
   },
   {
     quote: "La migration de notre base de données était un projet critique. Paradia l'a géré avec un professionnalisme et une efficacité remarquables. Aucune interruption, aucune perte de données. Simplement parfait.",
-    name: "Marc Antoine",
+    name: "David .L",
     title: "CTO",
     company: "Innovatech Solutions"
   }

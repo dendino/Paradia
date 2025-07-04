@@ -1,5 +1,5 @@
 {
-  "name": "paradia---automatisation-&-e-commerce",
+  "name": "paradia-automatisation-e-commerce",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,12 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react-dom": "^19.1.0",
+    "@google/genai": "^1.8.0",
     "react": "^19.1.0",
-    "@google/genai": "^1.8.0"
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^4.6.0",
     "typescript": "~5.7.2",
     "vite": "^6.2.0"
   }

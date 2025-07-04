@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
                <div className="col-span-2 md:col-span-2">
                   <h4 className="font-semibold tracking-wider uppercase text-blue-300">Suivez-nous</h4>
                   <div className="mt-4 flex space-x-4">
-                      <a href="#" onClick={handlePlaceholderClick} className="text-blue-200 hover:text-white transition-colors duration-200" aria-label="LinkedIn">
+                      <a href="https://www.linkedin.com/company/107758381" onClick={handlePlaceholderClick} className="text-blue-200 hover:text-white transition-colors duration-200" aria-label="LinkedIn">
                           <LinkedInIcon className="w-6 h-6" />
                       </a>
                       <a href="#" onClick={handlePlaceholderClick} className="text-blue-200 hover:text-white transition-colors duration-200" aria-label="Twitter">
